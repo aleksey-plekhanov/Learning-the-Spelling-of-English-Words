@@ -92,11 +92,17 @@
     <Compile Include="View\LearningWords.xaml.cs">
       <DependentUpon>LearningWords.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ManualProgram.xaml.cs">
       <DependentUpon>ManualProgram.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SettingsUser.xaml.cs">
       <DependentUpon>SettingsUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartMenu.xaml.cs">
+      <DependentUpon>StartMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VocabularyDictation.xaml.cs">
       <DependentUpon>VocabularyDictation.xaml</DependentUpon>
@@ -121,11 +127,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ManualProgram.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SettingsUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +180,23 @@
   <ItemGroup>
     <Resource Include="Images\background.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="vecteezy_landscape-vector-illustration_13374883.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sunset_in_the_fields_generated.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="5550760.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\5550760.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-home-11754248.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="back-track.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

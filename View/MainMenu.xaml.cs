@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,23 +17,28 @@ using System.Windows.Shapes;
 namespace Spelling_of_words.View
 {
     /// <summary>
-    /// Логика взаимодействия для SettingsUser.xaml
+    /// Логика взаимодействия для MainMenu.xaml
     /// </summary>
-    public partial class SettingsUser : Page
+    public partial class MainMenu : Page
     {
-        public SettingsUser()
+        public MainMenu()
         {
             InitializeComponent();
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("https://github.com/alexgger");
         }
     }
 }

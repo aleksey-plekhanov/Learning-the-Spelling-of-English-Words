@@ -9,6 +9,17 @@
       Title="SettingsUser">
 
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="/View/5550760.jpg"/>
+        </Grid.Background>
+        <Image Margin="20,10,730,390" Source="/free-icon-home-11754248.png" Stretch="Fill" Width="50" Height="50"/>
+        <TextBlock HorizontalAlignment="Center" Height="23" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontSize="18" TextAlignment="Center" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Настройка программы"/></TextBlock>
+        <CheckBox Content="Генерировать слова в случайном порядке" HorizontalAlignment="Left" Height="16" Margin="126,197,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+        <Button Content="Нажмите" HorizontalAlignment="Left" Height="25" Margin="307,132,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="126,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"><Run Language="ru-ru" Text="Выберите файл со словами: "/></TextBlock>
+        <CheckBox Content="Не показывать правильность ответа в диктанте" HorizontalAlignment="Left" Height="16" Margin="126,255,0,0" VerticalAlignment="Top" Width="328" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+        <CheckBox Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="16" Margin="126,225,0,0" VerticalAlignment="Top" Width="490" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+        <CheckBox Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="16" Margin="126,285,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+
     </Grid>
 </Page>

@@ -9,6 +9,13 @@
       Title="VocabularyDictation">
 
     <Grid>
-        
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/View/5550760.jpg"/>
+            </Grid.Background>
+            <Image Margin="20,10,730,390" Source="/free-icon-home-11754248.png" Stretch="Fill" Width="50" Height="50"/>
+
+        </Grid>
+
     </Grid>
 </Page>
