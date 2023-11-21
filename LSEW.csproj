@@ -86,6 +86,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\AboutProgram.xaml.cs">
+      <DependentUpon>AboutProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LearningWords.xaml.cs">
+      <DependentUpon>LearningWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManualProgram.xaml.cs">
+      <DependentUpon>ManualProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsUser.xaml.cs">
+      <DependentUpon>SettingsUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VocabularyDictation.xaml.cs">
+      <DependentUpon>VocabularyDictation.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,10 +113,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\AboutProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LearningWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ManualProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VocabularyDictation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Word.cs" />
-    <Compile Include="ParsingText\ParsingTXT.cs" />
+    <Compile Include="Systems\ParsingText\ParsingTXT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -129,10 +164,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="3897379.jpg" />
+    <Resource Include="Images\background.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
