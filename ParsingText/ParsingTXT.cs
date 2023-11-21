@@ -10,7 +10,7 @@ namespace LSEW.ParsingText
         public static List<Word> ReadCsvFile(string fileName)
         {
             // TODO Проверить исключения
-            if(File.Exists(fileName)) { throw new ArgumentException("Загружаемый файл не найден!"); }
+            if(!File.Exists(fileName)) { throw new ArgumentException("Загружаемый файл не найден!"); }
 
             List<Word> words = new List<Word>();
             using (StreamReader sr = new StreamReader(fileName))
