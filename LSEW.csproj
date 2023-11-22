@@ -178,25 +178,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\background.jpg" />
+    <Content Include="Images\background.png" />
+    <Resource Include="Images\btn\icon_home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="vecteezy_landscape-vector-illustration_13374883.jpg" />
+    <Resource Include="Images\btn\back-track.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="sunset_in_the_fields_generated.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="5550760.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\5550760.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="free-icon-home-11754248.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="back-track.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

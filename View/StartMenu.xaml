@@ -13,9 +13,9 @@
             <ImageBrush ImageSource="/View/5550760.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="44" Margin="234,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
-        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="315,182,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click"/>
-        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="315,257,0,0" VerticalAlignment="Top" Width="210"/>
-        <TextBlock HorizontalAlignment="Left" Height="33" Margin="679,385,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="315,182,0,0" VerticalAlignment="Top" Width="210" Click="btn_Start"/>
+        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="315,257,0,0" VerticalAlignment="Top" Width="210" Click="btn_About"/>
+        <TextBlock HorizontalAlignment="Left" Height="33" Margin="679,385,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16" MouseLeftButtonUp="textlabel_Github"/>
 
     </Grid>
 </Page>

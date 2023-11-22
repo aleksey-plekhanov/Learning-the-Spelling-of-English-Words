@@ -14,6 +14,6 @@
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="244,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" TextAlignment="Center" Background="White" FontFamily="Bahnschrift SemiLight"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="126" Margin="103,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="629" Background="White"><Run Text="Тренажер разрабатывается для помощи студентам в запоминании правописания английских слов. Он представляет собой словарный диктант, который помогает студентам проверить свои знания правописания слов на английском языке. Тренажер также может быть использован для тренировки написания слов и для улучшения навыков правописания"/><Run Language="ru-ru" Text=" на английском языке"/><Run Text="."/><LineBreak/><Run/><LineBreak/><Run Language="ru-ru" Text="Разработчик программы: Плеханов Алексей"/><LineBreak/><Run Language="ru-ru" Text="Страничка автора: "/><Run Text="github.com/alexgger"/><Run Language="ru-ru" Text=" "/></TextBlock>
-        <Image Margin="20,20,730,380" Source="/free-icon-home-11754248.png" Stretch="Fill" Width="50" Height="50"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_AboutBack"/>
     </Grid>
 </Page>

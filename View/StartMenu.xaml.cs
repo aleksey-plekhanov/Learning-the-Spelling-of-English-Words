@@ -26,12 +26,15 @@ namespace Spelling_of_words.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+        private void btn_Start(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new MainMenu());
         }
 
-        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e) {
+        private void btn_About(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new AboutProgram());
+        }
+
+        private void textlabel_Github(object sender, MouseButtonEventArgs e) {
             Process.Start("https://github.com/alexgger");
         }
     }

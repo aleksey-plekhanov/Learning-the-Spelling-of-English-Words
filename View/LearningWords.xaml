@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/View/5550760.jpg"/>
         </Grid.Background>
-        <Image Margin="20,10,730,390" Source="/free-icon-home-11754248.png" Stretch="Fill" Width="50" Height="50"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_LWBack"/>
 
     </Grid>
 </Page>

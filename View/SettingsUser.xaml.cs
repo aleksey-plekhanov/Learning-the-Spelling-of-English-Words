@@ -34,5 +34,10 @@ namespace Spelling_of_words.View
         {
 
         }
+
+        private void btn_SettingsBack(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

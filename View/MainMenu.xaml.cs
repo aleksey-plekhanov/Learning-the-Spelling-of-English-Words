@@ -26,19 +26,32 @@ namespace Spelling_of_words.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        private void btn_learnWords(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new LearningWords());
+        }
+        private void btn_Dictation(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new VocabularyDictation());
+        }
+
+        private void btn_Manual(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new ManualProgram());
+        }
+
+        private void btn_Settings(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new SettingsUser());
+        }
+
+        private void btn_Files(object sender, RoutedEventArgs e) {
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
+        private void textlabel_Github(object sender, MouseButtonEventArgs e) {
             Process.Start("https://github.com/alexgger");
+        }
+
+        private void btn_MainWindowBack(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }
