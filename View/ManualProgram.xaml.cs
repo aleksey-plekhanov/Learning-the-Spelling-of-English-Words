@@ -29,5 +29,10 @@ namespace Spelling_of_words.View
         {
             NavigationService.GoBack();
         }
+
+        private void btn_closeApp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

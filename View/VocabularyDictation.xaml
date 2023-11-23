@@ -41,7 +41,7 @@
             <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_VDBack"/>
             <Label x:Name="labelScore_Copy" Content="Время прохождения: " HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
             <Label x:Name="quantityScore_Copy" Content="0" HorizontalAlignment="Left" Margin="154,367,0,0" RenderTransformOrigin="-0.451,0.512" Width="48" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
-
+            <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
         </Grid>
     </Grid>
 </Page>

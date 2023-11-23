@@ -86,6 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\MainControls.cs" />
     <Compile Include="View\AboutProgram.xaml.cs">
       <DependentUpon>AboutProgram.xaml</DependentUpon>
     </Compile>
@@ -178,10 +179,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="View\back-track.png" />
     <Resource Include="View\icon-close.png" />
-    <Resource Include="View\close-app.png" />
-    <Resource Include="close-app.png" />
-    <Resource Include="free-icon-english-11276763.png" />
     <Content Include="Images\background.png" />
     <Resource Include="View\icon_home.png" />
     <Resource Include="View\background.png" />

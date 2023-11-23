@@ -19,10 +19,11 @@
             <Button Content="Изучение правописания слов" HorizontalAlignment="Left" Height="50" Margin="176,151,0,0" VerticalAlignment="Top" Width="211" Click="btn_learnWords"/>
             <Button Content="Словарный диктант" HorizontalAlignment="Left" Height="50" Margin="400,151,0,0" VerticalAlignment="Top" Width="202" Click="btn_Dictation"/>
             <TextBlock HorizontalAlignment="Left" Height="29" Margin="176,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="426" TextAlignment="Center" FontSize="20" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Главное меню"/></TextBlock>
-            <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_MainWindowBack"/>
+            <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/back-track.png" MouseLeftButtonDown="btn_MainWindowBack"/>
+            <TextBlock HorizontalAlignment="Left" Height="33" Margin="705,405,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16" MouseLeftButtonUp="textlabel_Github"/>
+            <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
 
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Height="33" Margin="679,385,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16" MouseLeftButtonUp="textlabel_Github"/>
 
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LSEW.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,5 +29,11 @@ namespace Spelling_of_words.View
         private void btn_AboutBack(object sender, MouseButtonEventArgs e){
             NavigationService.GoBack();
         }
+
+        private void btn_closeApp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 }

@@ -20,6 +20,6 @@
         <CheckBox Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="16" Margin="126,225,0,0" VerticalAlignment="Top" Width="490" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
         <CheckBox Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="16" Margin="126,285,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
         <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_SettingsBack"/>
-
+        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
     </Grid>
 </Page>
