@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/View/5550760.jpg"/>
+            <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="44" Margin="234,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
         <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="315,182,0,0" VerticalAlignment="Top" Width="210" Click="btn_Start"/>

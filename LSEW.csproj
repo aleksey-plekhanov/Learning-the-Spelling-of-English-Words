@@ -179,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\background.png" />
+    <Resource Include="View\icon_home.png" />
+    <Resource Include="View\background.png" />
     <Resource Include="Images\btn\icon_home.png" />
   </ItemGroup>
   <ItemGroup>

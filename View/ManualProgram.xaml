@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/View/5550760.jpg"/>
+            <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
         <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_ManualBack"/>
 
