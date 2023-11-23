@@ -37,5 +37,9 @@ namespace Spelling_of_words.View
         private void textlabel_Github(object sender, MouseButtonEventArgs e) {
             Process.Start("https://github.com/alexgger");
         }
+
+        private void btn_CloseApp(object sender, MouseButtonEventArgs e) {
+            Application.Current.Shutdown();
+        }
     }
 }

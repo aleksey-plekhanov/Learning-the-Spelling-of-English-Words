@@ -178,6 +178,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="View\icon-close.png" />
+    <Resource Include="View\close-app.png" />
+    <Resource Include="close-app.png" />
+    <Resource Include="free-icon-english-11276763.png" />
     <Content Include="Images\background.png" />
     <Resource Include="View\icon_home.png" />
     <Resource Include="View\background.png" />

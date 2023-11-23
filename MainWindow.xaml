@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LSEW"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Frame Name="MainFrame" Background="White" NavigationUIVisibility="Hidden"></Frame>
+        WindowStyle="None"
+        Title="Тренажер для эффективного изучения правописания английских слов" Height="430" Width="800" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Frame Name="MainFrame" Background="White" NavigationUIVisibility="Hidden" ScrollViewer.CanContentScroll="True"></Frame>
 </Window>
