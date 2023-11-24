@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using Spelling_of_words.Settings;
 
 namespace Spelling_of_words.View
 {
@@ -43,6 +46,27 @@ namespace Spelling_of_words.View
         private void btn_closeApp(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void SelectFolder(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+
+                dialog.Title = "Выберите файл со словами";
+                dialog.InitialDirectory = SettingsProgram.pathFileWords;
+                dialog.IsFolderPicker = true;
+
+                if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    SettingsProgram.pathFileWords = dialog.FileName;
+                    pathFileBox.Text = SettingsProgram.pathFileWords;
+
+                    MessageBox.Show($"Вы выбрали папку: {SettingsProgram.pathFileWords}\nКоличество файлов в выбранной папке: {new DirectoryInfo(SettingsProgram.pathFileWords).GetFiles().Length}", "Выбор файла");
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }
