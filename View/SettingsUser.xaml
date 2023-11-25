@@ -12,16 +12,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Center" Height="23" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontSize="18" TextAlignment="Center" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Настройка программы"/></TextBlock>
-        <CheckBox Content="Генерировать слова в случайном порядке" HorizontalAlignment="Left" Height="16" Margin="126,197,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" IsChecked="True" Foreground="White" FontWeight="Bold"/>
-        <Button Content="Изменить" HorizontalAlignment="Left" Height="21" Margin="556,137,0,0" VerticalAlignment="Top" Width="110" Click="SelectFolder"/>
+        <TextBlock HorizontalAlignment="Center" Height="28" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="432" FontSize="20" TextAlignment="Center" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Настройка программы"/></TextBlock>
+        <CheckBox x:Name="state_generatewords" Content="Генерировать слова в случайном порядке" HorizontalAlignment="Left" Height="23" Margin="126,197,0,0" VerticalAlignment="Top" Width="363" HorizontalContentAlignment="Center" IsChecked="True" Foreground="White" FontWeight="Bold" Click="btn_generaterandomwords" FontSize="14"/>
+        <Button Content="Изменить" HorizontalAlignment="Left" Height="21" Margin="589,137,0,0" VerticalAlignment="Top" Width="110" Click="SelectFolder"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="112,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Текущий путь файла со словами: "/></TextBlock>
-        <CheckBox Content="Не показывать результат ответа в диктанте" HorizontalAlignment="Left" Height="16" Margin="126,251,0,0" VerticalAlignment="Top" Width="306" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
-        <CheckBox Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="16" Margin="126,225,0,0" VerticalAlignment="Top" Width="506" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
-        <CheckBox Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="16" Margin="126,278,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
+        <CheckBox x:Name="state_notresponseresult" Content="Не показывать результат ответа в диктанте" HorizontalAlignment="Left" Height="22" Margin="126,251,0,0" VerticalAlignment="Top" Width="375" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" Click="btn_hideresponseresult" FontSize="14"/>
+        <CheckBox x:Name="state_repeatspellingword" Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="21" Margin="126,225,0,0" VerticalAlignment="Top" Width="606" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" Click="btn_repeatspellingwords" FontSize="14"/>
+        <CheckBox x:Name="state_disabletimecounting" Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="21" Margin="126,278,0,0" VerticalAlignment="Top" Width="369" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" Click="btn_disabletimecounting" FontSize="14"/>
         <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_SettingsBack"/>
         <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp" InputScope="Default"/>
-        <CheckBox Content="Не сохранять настройки приложения" HorizontalAlignment="Left" Height="16" Margin="126,306,0,0" VerticalAlignment="Top" Width="274" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="pathFileBox" HorizontalAlignment="Left" Margin="315,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Text="" IsReadOnly="True"/>
+        <TextBox x:Name="pathFileBox" HorizontalAlignment="Left" Margin="315,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Text="" IsReadOnly="True" FontSize="10"/>
     </Grid>
 </Page>

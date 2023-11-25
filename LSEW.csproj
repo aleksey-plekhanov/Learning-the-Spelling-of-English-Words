@@ -138,7 +138,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\MainControls.cs" />
-    <Compile Include="Settings\SettingsProgram.cs" />
     <Compile Include="View\AboutProgram.xaml.cs">
       <DependentUpon>AboutProgram.xaml</DependentUpon>
     </Compile>

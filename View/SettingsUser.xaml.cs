@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using Spelling_of_words.Settings;
+using Spelling_of_words.Properties;
 
 namespace Spelling_of_words.View
 {
@@ -26,17 +26,15 @@ namespace Spelling_of_words.View
         public SettingsUser()
         {
             InitializeComponent();
+
+            pathFileBox.Text = Settings.Default.PathFileWords;
+
+            state_generatewords.IsChecked = Settings.Default.GenerateRandomWords;
+            state_repeatspellingword.IsChecked = Settings.Default.RepeatSpellingWords;
+            state_notresponseresult.IsChecked = Settings.Default.NotDisplayingResponseResult;
+            state_disabletimecounting.IsChecked = Settings.Default.DisableTimeCounting;
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btn_SettingsBack(object sender, MouseButtonEventArgs e)
         {
@@ -55,18 +53,44 @@ namespace Spelling_of_words.View
                 CommonOpenFileDialog dialog = new CommonOpenFileDialog();
 
                 dialog.Title = "Выберите файла со словами";
-                dialog.InitialDirectory = SettingsProgram.pathFileWords;
+                dialog.InitialDirectory = Settings.Default.PathFileWords;
                 dialog.RestoreDirectory = true;
 
                 if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
                 {
-                    SettingsProgram.pathFileWords = dialog.FileName;
-                    pathFileBox.Text = SettingsProgram.pathFileWords;
+                    Settings.Default.PathFileWords = dialog.FileName;
+                    pathFileBox.Text = Settings.Default.PathFileWords;
 
-                    MessageBox.Show($"Вы выбрали файл: {SettingsProgram.pathFileWords}", "Выбор файла");
+                    MessageBox.Show($"Вы выбрали файл: {Settings.Default.PathFileWords}", "Выбор файла");
+                    Settings.Default.Save();
                 }
+                
             }
             catch(Exception ex) { MessageBox.Show(ex.Message, "Error"); }
+        }
+
+        private void btn_repeatspellingwords(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.RepeatSpellingWords = (bool)state_repeatspellingword.IsChecked;
+            Settings.Default.Save();
+        }
+
+        private void btn_generaterandomwords(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.GenerateRandomWords = (bool)state_generatewords.IsChecked;
+            Settings.Default.Save();
+        }
+
+        private void btn_hideresponseresult(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.NotDisplayingResponseResult = (bool)state_notresponseresult.IsChecked;
+            Settings.Default.Save();
+        }
+
+        private void btn_disabletimecounting(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.DisableTimeCounting = (bool)state_disabletimecounting.IsChecked;
+            Settings.Default.Save();
         }
     }
 }
