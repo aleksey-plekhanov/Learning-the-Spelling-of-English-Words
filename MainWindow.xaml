@@ -8,5 +8,6 @@
         WindowStyle="None"
         Title="Тренажер для эффективного изучения правописания английских слов" Height="430" Width="800" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
+    
     <Frame Name="MainFrame" Background="White" NavigationUIVisibility="Hidden" ScrollViewer.CanContentScroll="True"></Frame>
 </Window>

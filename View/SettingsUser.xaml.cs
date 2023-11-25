@@ -54,19 +54,19 @@ namespace Spelling_of_words.View
             {
                 CommonOpenFileDialog dialog = new CommonOpenFileDialog();
 
-                dialog.Title = "Выберите файл со словами";
+                dialog.Title = "Выберите файла со словами";
                 dialog.InitialDirectory = SettingsProgram.pathFileWords;
-                dialog.IsFolderPicker = true;
+                dialog.RestoreDirectory = true;
 
                 if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
                 {
                     SettingsProgram.pathFileWords = dialog.FileName;
                     pathFileBox.Text = SettingsProgram.pathFileWords;
 
-                    MessageBox.Show($"Вы выбрали папку: {SettingsProgram.pathFileWords}\nКоличество файлов в выбранной папке: {new DirectoryInfo(SettingsProgram.pathFileWords).GetFiles().Length}", "Выбор файла");
+                    MessageBox.Show($"Вы выбрали файл: {SettingsProgram.pathFileWords}", "Выбор файла");
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch(Exception ex) { MessageBox.Show(ex.Message, "Error"); }
         }
     }
 }

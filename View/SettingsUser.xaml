@@ -13,15 +13,15 @@
             <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Center" Height="23" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontSize="18" TextAlignment="Center" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Настройка программы"/></TextBlock>
-        <CheckBox Content="Генерировать слова в случайном порядке" HorizontalAlignment="Left" Height="16" Margin="126,197,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" IsChecked="True"/>
+        <CheckBox Content="Генерировать слова в случайном порядке" HorizontalAlignment="Left" Height="16" Margin="126,197,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" IsChecked="True" Foreground="White" FontWeight="Bold"/>
         <Button Content="Изменить" HorizontalAlignment="Left" Height="21" Margin="556,137,0,0" VerticalAlignment="Top" Width="110" Click="SelectFolder"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="126,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"><Run Language="ru-ru" Text="Текущий путь файла со словами: "/></TextBlock>
-        <CheckBox Content="Не показывать результат ответа в диктанте" HorizontalAlignment="Left" Height="16" Margin="126,255,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
-        <CheckBox Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="16" Margin="126,225,0,0" VerticalAlignment="Top" Width="490" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
-        <CheckBox Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="16" Margin="126,285,0,0" VerticalAlignment="Top" Width="294" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="112,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Текущий путь файла со словами: "/></TextBlock>
+        <CheckBox Content="Не показывать результат ответа в диктанте" HorizontalAlignment="Left" Height="16" Margin="126,251,0,0" VerticalAlignment="Top" Width="306" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
+        <CheckBox Content="Не предлагать изучение правописания неправильно написанных Вами слов " HorizontalAlignment="Left" Height="16" Margin="126,225,0,0" VerticalAlignment="Top" Width="506" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
+        <CheckBox Content="Отключить подсчет времени выполнения" HorizontalAlignment="Left" Height="16" Margin="126,278,0,0" VerticalAlignment="Top" Width="301" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_SettingsBack"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
-        <CheckBox Content="Не сохранять настройки приложения" HorizontalAlignment="Left" Height="16" Margin="126,316,0,0" VerticalAlignment="Top" Width="274" HorizontalContentAlignment="Center" Checked="CheckBox_Checked"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp" InputScope="Default"/>
+        <CheckBox Content="Не сохранять настройки приложения" HorizontalAlignment="Left" Height="16" Margin="126,306,0,0" VerticalAlignment="Top" Width="274" HorizontalContentAlignment="Center" Checked="CheckBox_Checked" Foreground="White" FontWeight="Bold"/>
         <TextBox x:Name="pathFileBox" HorizontalAlignment="Left" Margin="315,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Text="" IsReadOnly="True"/>
     </Grid>
 </Page>

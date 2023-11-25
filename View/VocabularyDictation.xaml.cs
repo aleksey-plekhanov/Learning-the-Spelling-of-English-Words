@@ -1,5 +1,6 @@
 ﻿using LSEW.Models;
 using LSEW.ParsingText;
+using Spelling_of_words.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace Spelling_of_words.View
         private void InitializeWords()
         {
             // TODO Если файл не найден
-            words = ParsingTXT.ReadCsvFile(@"D:\Documents\test.csv");
+            words = ParsingTXT.ReadCsvFile(SettingsProgram.pathFileWords);
 
             // Делаем рандомное положение слов в списке
             words = words.OrderBy(_ => new Random().Next()).ToList();

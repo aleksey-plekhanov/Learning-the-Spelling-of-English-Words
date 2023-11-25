@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace LSEW.Models
 {
-    public class MainControls
+    public static class MainControls
     {
         public static void btn_closeApp(object sender, MouseButtonEventArgs e)
         {
