@@ -137,7 +137,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\MainControls.cs" />
     <Compile Include="View\AboutProgram.xaml.cs">
       <DependentUpon>AboutProgram.xaml</DependentUpon>
     </Compile>
