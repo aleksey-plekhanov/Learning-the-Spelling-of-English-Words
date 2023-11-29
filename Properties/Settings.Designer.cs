@@ -82,5 +82,17 @@ namespace Spelling_of_words.Properties {
                 this["DisableTimeCounting"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int choiseHints {
+            get {
+                return ((int)(this["choiseHints"]));
+            }
+            set {
+                this["choiseHints"] = value;
+            }
+        }
     }
 }

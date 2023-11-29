@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_LWBack"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_VDBack"/>
         <Button Style="{DynamicResource btnCheckSettings}" x:Name="btn_check" Content="Проверить" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Height="39" Width="173" Click="btn_Click" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Padding="1,1,1,1" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -35,10 +35,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Label x:Name="labelScore" Content="Кол-во правильных ответов: " HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="quantityScore" Content="0" HorizontalAlignment="Left" Margin="194,385,0,0" RenderTransformOrigin="-0.451,0.512" Width="36" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
-        <Label x:Name="labelScore_Copy" Content="Время прохождения: " HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="quantityScore_Copy" Content="0" HorizontalAlignment="Left" Margin="154,367,0,0" RenderTransformOrigin="-0.451,0.512" Width="48" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png"/>
+        <Label x:Name="textlabel_timer" Content="Время изучения: " HorizontalAlignment="Left" Margin="10,397,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="timer_label" Content="0 сек." HorizontalAlignment="Left" Margin="116,398,0,0" RenderTransformOrigin="-0.451,0.512" Width="119" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+        <ComboBox x:Name="choiceHintsBox" HorizontalAlignment="Left" Margin="550,405,0,0" VerticalAlignment="Top" Width="240" IsReadOnly="True" SelectionChanged="choiceHintsBox_SelectionChanged" FontSize="10"/>
+        <Label x:Name="labelScore_Copy" Content="Режим подсказок" HorizontalAlignment="Left" Margin="550,379,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Width="240" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
     </Grid>
 </Page>
