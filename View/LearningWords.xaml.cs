@@ -1,21 +1,13 @@
 ﻿using LSEW.Models;
-using LSEW.ParsingText;
 using Spelling_of_words.Properties;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Spelling_of_words.View
@@ -24,17 +16,24 @@ namespace Spelling_of_words.View
     {
         private List<Word> words;
 
-        private int current_word_index = 0;
+        private int current_word_index = -1;
         private int timerCounter = 0;
 
-        private static Random rng = new Random();
-
-        public LearningWords()
+        public LearningWords(List<Word> words_)
         {
             InitializeComponent();
-            InitializeWords();
-            LoadHints();
+
+            // Загружаем слова
+            words = words_;
+
+            // Подгрузка первого слова, подсказок
+            LoadFunctionalComponents();
+        }
+
+        public void LoadFunctionalComponents()
+        {
             ShowNextWords();
+            LoadHints();
 
             // (Настройка) Отображение время прохождения на экран
             if (!Settings.Default.DisableTimeCounting)
@@ -77,24 +76,6 @@ namespace Spelling_of_words.View
             };
 
             choiceHintsBox.SelectedIndex = Settings.Default.choiseHints;
-        }
-
-        private void InitializeWords()
-        {
-            try
-            {
-                // TODO - ПРОВЕРКА
-                words = ParsingTXT.ReadTXTFile(Settings.Default.PathFileWords);
-
-                if (Settings.Default.GenerateRandomWords)
-                {
-                    words = words.OrderBy(a => rng.Next()).ToList();
-                }
-
-                MessageBox.Show($"Загружено {words.Count} слов(а)", "Слова из файла");
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-
         }
 
         private void ShowHints()
@@ -156,32 +137,33 @@ namespace Spelling_of_words.View
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            if (current_word_index < words.Count - 1)
-            {
-                btnNextWord.Visibility = Visibility.Visible;
+            if (string.IsNullOrEmpty(inputWord.Text)) return;
 
-                Word current = words[current_word_index];
+            btnNextWord.Visibility = Visibility.Visible;
 
-                if (inputWord.Text.ToLower() == current.English.ToLower())
-                {
-                    ResponseResult(Brushes.Green, "Правильно!");
-                }
-                else ResponseResult(Brushes.Red, "Неправильно!");
-            }
-            else
+            Word current = words[current_word_index];
+
+            if (inputWord.Text.ToLower() == current.English.ToLower())
             {
-                //inputWord.Text = $"Слова закончились! Вы ответили правильно {correctWords} из {words.Count}";
+                ResponseResult(Brushes.Green, "Правильно!");
             }
+            else ResponseResult(Brushes.Red, "Неправильно!");
         }
 
         private void btnNextWord_Click(object sender, RoutedEventArgs e)
         {
+            if (current_word_index == words.Count - 1)
+            {
+                NavigationService.Navigate(new FinishLearning());
+                return;
+            }
+
             ShowNextWords();
         }
 
         private void btn_VDBack(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new MainMenu());
         }
 
         private void btn_closeApp(object sender, MouseButtonEventArgs e)

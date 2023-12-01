@@ -140,6 +140,12 @@
     <Compile Include="View\AboutProgram.xaml.cs">
       <DependentUpon>AboutProgram.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AssessmentDication.xaml.cs">
+      <DependentUpon>AssessmentDication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FinishLearning.xaml.cs">
+      <DependentUpon>FinishLearning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LearningWords.xaml.cs">
       <DependentUpon>LearningWords.xaml</DependentUpon>
     </Compile>
@@ -174,6 +180,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AssessmentDication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FinishLearning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LearningWords.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,7 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Word.cs" />
-    <Compile Include="Systems\ParsingText\ParsingTXT.cs" />
+    <Compile Include="Systems\ParsingTXT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -231,6 +245,8 @@
   <ItemGroup>
     <Resource Include="View\back-track.png" />
     <Resource Include="View\icon-close.png" />
+    <Resource Include="free-icon-trophy-4549504.png" />
+    <Resource Include="free-icon-box-4108283.png" />
     <Content Include="Images\background.png" />
     <Resource Include="View\icon_home.png" />
     <Resource Include="View\background.png" />

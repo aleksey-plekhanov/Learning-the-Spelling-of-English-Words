@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Windows;
 using LSEW.Models;
+using Spelling_of_words.Properties;
 
 namespace LSEW.ParsingText
 {
     internal class ParsingTXT
     {
-        public static List<Word> ReadTXTFile(string fileName)
+        private static Random rand = new Random();
+
+        public static List<Word> ReadFile()
         {
-            // TODO Проверить исключения
-            if(!File.Exists(fileName)) { throw new ArgumentException("Загружаемый файл не найден!"); }
+            string pathFile = Settings.Default.PathFileWords;
 
             List<Word> words = new List<Word>();
-            using (StreamReader sr = new StreamReader(fileName))
+            if (!File.Exists(pathFile)) return words;
+
+            using (StreamReader sr = new StreamReader(pathFile))
             {
                 string currentLine;
                 string[] currentFields;
@@ -31,6 +37,16 @@ namespace LSEW.ParsingText
                     words.Add(currentUser);
                 }
             }
+
+            if (words.Count == 0) return words;
+
+            if (Settings.Default.GenerateRandomWords)
+            {
+                words = words.OrderBy(a => rand.Next()).ToList();
+            }
+
+            MessageBox.Show($"Загружено {words.Count} слов(а)", "Слова из файла");
+
 
             return words;
         }

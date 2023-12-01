@@ -1,38 +1,32 @@
 ﻿using LSEW.Models;
-using LSEW.ParsingText;
 using Spelling_of_words.Properties;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Spelling_of_words.View
 {
-    public partial class VocabularyDictation : Page
+    public partial class VocabularyDictation : Page 
     {
         private List<Word> words;
+        private List<Word> incorrect_words = new List<Word>();
 
-        private int current_word_index = 0;
+        private int current_word_index = -1;
         private int correctWords = 0;
         private int timerCounter = 0;
 
-        private static Random rng = new Random();
-
-        public VocabularyDictation()
+        public VocabularyDictation(List<Word> words_)
         {
             InitializeComponent();
-            InitializeWords();
+
+            // Загрузка слов с файла
+            words = words_;
+
             ShowNextWords();
 
             // (Настройка) Отображение время прохождения на экран
@@ -68,23 +62,6 @@ namespace Spelling_of_words.View
             timerCounter++;
         }
 
-        private void InitializeWords()
-        {
-            try
-            {
-                // TODO - ПРОВЕРКА
-                words = ParsingTXT.ReadTXTFile(Settings.Default.PathFileWords);
-
-                if (Settings.Default.GenerateRandomWords) {
-                    words = words.OrderBy(a => rng.Next()).ToList();
-                }
-
-                MessageBox.Show($"Загружено {words.Count} слов(а)", "Слова из файла");
-            }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
-
-        }
-
         private void ShowNextWords()
         {
             word_label.Content = words[++current_word_index].Russian.ToString();
@@ -103,35 +80,37 @@ namespace Spelling_of_words.View
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            if (current_word_index < words.Count - 1)
+            if (string.IsNullOrEmpty(inputWord.Text)) return;
+
+            btnNextWord.Visibility = Visibility.Visible;
+            btn_check.Visibility = Visibility.Hidden;
+
+            Word current = words[current_word_index];
+
+            if(inputWord.Text.ToLower() == current.English.ToLower())
             {
-                btnNextWord.Visibility = Visibility.Visible;
-                btn_check.Visibility = Visibility.Hidden;
-
-                Word current = words[current_word_index];
-
-                if(inputWord.Text.ToLower() == current.English.ToLower())
-                {
-                    quantityScore.Content = ++correctWords;
-                    if(!Settings.Default.NotDisplayingResponseResult) {
-                        ResponseResult(Brushes.Green, "Правильно!");
-                    }
-                }
-                else
-                {
-                    if (!Settings.Default.NotDisplayingResponseResult) {
-                        ResponseResult(Brushes.Red, "Неправильно!");
-                    }
+                quantityScore.Content = ++correctWords;
+                if(!Settings.Default.NotDisplayingResponseResult) {
+                    ResponseResult(Brushes.Green, "Правильно!");
                 }
             }
             else
             {
-                inputWord.Text = $"Слова закончились! Вы ответили правильно {correctWords} из {words.Count}";
+                if (!Settings.Default.NotDisplayingResponseResult) {
+                    ResponseResult(Brushes.Red, "Неправильно!");
+                }
+                incorrect_words.Add(current);
             }
         }
 
         private void btnNextWord_Click(object sender, RoutedEventArgs e)
         {
+            if (current_word_index == words.Count - 1)
+            {
+                NavigationService.Navigate(new AssessmentDication(correctWords, words.Count, incorrect_words));
+                return;
+            }
+
             ShowNextWords();
         }
 

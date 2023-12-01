@@ -14,6 +14,7 @@
         </Grid.Background>
         <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_ManualBack"/>
         <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+        <TextBlock HorizontalAlignment="Left" Height="33" Margin="705,405,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16"/>
 
     </Grid>
 </Page>

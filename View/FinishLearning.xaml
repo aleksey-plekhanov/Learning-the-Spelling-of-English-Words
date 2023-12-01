@@ -1,0 +1,25 @@
+﻿<Page x:Class="Spelling_of_words.View.FinishLearning"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Spelling_of_words.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FinishLearning">
+
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/View/background.png"/>
+            </Grid.Background>
+            <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_FLBack"/>
+            <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+            <Label Content="Слова закончились!" HorizontalAlignment="Left" Margin="282,111,0,0" VerticalAlignment="Top" FontSize="28" FontFamily="Bahnschrift SemiBold" Foreground="White"/>
+            <Button Content="Начать заново изучать слова" HorizontalAlignment="Left" Margin="266,198,0,0" VerticalAlignment="Top" Height="40" Width="300" FontSize="18" Click="btn_startLearningAgain"/>
+            <Button Content="Выйти в главное меню" HorizontalAlignment="Left" Margin="266,259,0,0" VerticalAlignment="Top" FontSize="18" Height="40" Width="300" Click="btn_returnMainMenu"/>
+
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LSEW.ParsingText;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace Spelling_of_words.View
 {
-    /// <summary>
-    /// Логика взаимодействия для MainMenu.xaml
-    /// </summary>
     public partial class MainMenu : Page
     {
         public MainMenu()
@@ -27,10 +25,26 @@ namespace Spelling_of_words.View
         }
 
         private void btn_learnWords(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new LearningWords());
+
+            var words = ParsingTXT.ReadFile();
+            if (words == null || words.Count() == 0)
+            {
+                MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Изучение правописания слов | Ошибка чтения файла");
+                return;
+            }
+
+            NavigationService.Navigate(new LearningWords(words));
         }
-        private void btn_Dictation(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new VocabularyDictation());
+        private void btn_Dictation(object sender, RoutedEventArgs e) 
+        {
+            var words = ParsingTXT.ReadFile();
+            if(words == null || words.Count() == 0)
+            {
+                MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Диктант | Ошибка чтения файла");
+                return;
+            }
+
+            NavigationService.Navigate(new VocabularyDictation(words));
         }
 
         private void btn_Manual(object sender, RoutedEventArgs e) {
@@ -45,13 +59,9 @@ namespace Spelling_of_words.View
 
         }
 
-        private void textlabel_Github(object sender, MouseButtonEventArgs e) {
-            Process.Start("https://github.com/alexgger");
-        }
-
         private void btn_MainWindowBack(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new StartMenu());
         }
 
         private void btn_closeApp(object sender, MouseButtonEventArgs e)
