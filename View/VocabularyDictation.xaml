@@ -42,6 +42,8 @@
             <Label x:Name="textlabel_timer" Content="Время прохождения: " HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
             <Label x:Name="timer_label" Content="0 cек." HorizontalAlignment="Left" Margin="144,368,0,0" RenderTransformOrigin="-0.451,0.512" Width="105" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
             <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+            <Label x:Name="textlabel_timerLimited" Content="Осталось на ответ:" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="timerLimited_label" Content="0 cек." HorizontalAlignment="Left" Margin="144,349,0,0" RenderTransformOrigin="-0.451,0.512" Width="105" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
         </Grid>
     </Grid>
 </Page>

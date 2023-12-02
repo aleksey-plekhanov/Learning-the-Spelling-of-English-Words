@@ -50,12 +50,12 @@ namespace Spelling_of_words.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool RepeatSpellingWords {
+        public bool TimeLimiter {
             get {
-                return ((bool)(this["RepeatSpellingWords"]));
+                return ((bool)(this["TimeLimiter"]));
             }
             set {
-                this["RepeatSpellingWords"] = value;
+                this["TimeLimiter"] = value;
             }
         }
         
@@ -92,6 +92,18 @@ namespace Spelling_of_words.Properties {
             }
             set {
                 this["choiseHints"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int limitedTime {
+            get {
+                return ((int)(this["limitedTime"]));
+            }
+            set {
+                this["limitedTime"] = value;
             }
         }
     }

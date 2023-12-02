@@ -155,6 +155,9 @@
     <Compile Include="View\ManualProgram.xaml.cs">
       <DependentUpon>ManualProgram.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SettingsLimitedTime.xaml.cs">
+      <DependentUpon>SettingsLimitedTime.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SettingsUser.xaml.cs">
       <DependentUpon>SettingsUser.xaml</DependentUpon>
     </Compile>
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ManualProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsLimitedTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

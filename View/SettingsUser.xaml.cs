@@ -8,9 +8,6 @@ using System.Windows.Navigation;
 
 namespace Spelling_of_words.View
 {
-    /// <summary>
-    /// Логика взаимодействия для SettingsUser.xaml
-    /// </summary>
     public partial class SettingsUser : Page
     {
         public SettingsUser()
@@ -20,11 +17,19 @@ namespace Spelling_of_words.View
             pathFileBox.Text = Settings.Default.PathFileWords;
 
             state_generatewords.IsChecked = Settings.Default.GenerateRandomWords;
-            state_repeatspellingword.IsChecked = Settings.Default.RepeatSpellingWords;
+            state_timeLimiter.IsChecked = Settings.Default.TimeLimiter;
             state_notresponseresult.IsChecked = Settings.Default.NotDisplayingResponseResult;
             state_disabletimecounting.IsChecked = Settings.Default.DisableTimeCounting;
         }
-
+        
+        public void LoadTextTimeLimited()
+        {
+            if (Settings.Default.TimeLimiter)
+            {
+                state_timeLimiter.Content = new string(' ', 7) + $"Ограничить время на ответ в диктанте. Ограничение: {Settings.Default.limitedTime} сек.";
+            }
+            else state_timeLimiter.Content = new string(' ', 7) + "Ограничить время на ответ в диктанте";
+        }
 
         private void btn_SettingsBack(object sender, MouseButtonEventArgs e)
         {
@@ -59,10 +64,17 @@ namespace Spelling_of_words.View
             catch(Exception ex) { MessageBox.Show(ex.Message, "Error"); }
         }
 
-        private void btn_repeatspellingwords(object sender, RoutedEventArgs e)
+        private void btn_timeLimiter(object sender, RoutedEventArgs e)
         {
-            Settings.Default.RepeatSpellingWords = (bool)state_repeatspellingword.IsChecked;
+            if (!Settings.Default.TimeLimiter)
+            {
+                NavigationService.Navigate(new SettingsLimitedTime());
+            }
+
+            Settings.Default.TimeLimiter = (bool)state_timeLimiter.IsChecked;
             Settings.Default.Save();
+
+            LoadTextTimeLimited();
         }
 
         private void btn_generaterandomwords(object sender, RoutedEventArgs e)
@@ -81,6 +93,11 @@ namespace Spelling_of_words.View
         {
             Settings.Default.DisableTimeCounting = (bool)state_disabletimecounting.IsChecked;
             Settings.Default.Save();
+        }
+
+        private void state_timeLimiter_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            LoadTextTimeLimited();
         }
     }
 }

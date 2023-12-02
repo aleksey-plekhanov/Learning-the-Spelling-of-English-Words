@@ -19,6 +19,8 @@ namespace Spelling_of_words.View
         private int current_word_index = -1;
         private int timerCounter = 0;
 
+        DispatcherTimer timer = new DispatcherTimer();
+
         public LearningWords(List<Word> words_)
         {
             InitializeComponent();
@@ -38,7 +40,6 @@ namespace Spelling_of_words.View
             // (Настройка) Отображение время прохождения на экран
             if (!Settings.Default.DisableTimeCounting)
             {
-                DispatcherTimer timer = new DispatcherTimer();
                 timer.Interval = TimeSpan.FromSeconds(1);
                 timer.Tick += new EventHandler(timer_Tick);
                 timer.Start();
@@ -163,6 +164,7 @@ namespace Spelling_of_words.View
 
         private void btn_VDBack(object sender, MouseButtonEventArgs e)
         {
+            timer.Stop();
             NavigationService.Navigate(new MainMenu());
         }
 

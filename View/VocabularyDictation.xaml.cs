@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Windows.Threading;
 
+
 namespace Spelling_of_words.View
 {
     public partial class VocabularyDictation : Page 
@@ -18,7 +19,12 @@ namespace Spelling_of_words.View
 
         private int current_word_index = -1;
         private int correctWords = 0;
+
         private int timerCounter = 0;
+        private int timerCountDown = 0;
+
+        private DispatcherTimer time_working = new DispatcherTimer();
+        private DispatcherTimer timer_limited = new DispatcherTimer();
 
         public VocabularyDictation(List<Word> words_)
         {
@@ -27,15 +33,26 @@ namespace Spelling_of_words.View
             // Загрузка слов с файла
             words = words_;
 
+            if (Settings.Default.TimeLimiter)
+            {
+                timer_limited.Interval = TimeSpan.FromSeconds(1);
+                timer_limited.Tick += new EventHandler(timerLimited_Tick);
+                timer_limited.Start();
+            }
+            else
+            {
+                textlabel_timerLimited.Visibility = Visibility.Hidden;
+                timerLimited_label.Visibility = Visibility.Hidden;
+            }
+
             ShowNextWords();
 
             // (Настройка) Отображение время прохождения на экран
             if (!Settings.Default.DisableTimeCounting)
             {
-                DispatcherTimer timer = new DispatcherTimer();
-                timer.Interval = TimeSpan.FromSeconds(1);
-                timer.Tick += new EventHandler(timer_Tick);
-                timer.Start();
+                time_working.Interval = TimeSpan.FromSeconds(1);
+                time_working.Tick += new EventHandler(timer_Tick);
+                time_working.Start();
             }
             else {
                 timer_label.Visibility = Visibility.Hidden;
@@ -60,6 +77,18 @@ namespace Spelling_of_words.View
             else timer_label.Content = $"{timerCounter} сек.";
 
             timerCounter++;
+        }
+
+        void timerLimited_Tick(object sender, EventArgs e)
+        {
+            int time = Settings.Default.limitedTime - timerCountDown;
+
+            if (timerCountDown <= Settings.Default.limitedTime)
+            {
+                timerLimited_label.Content = $"{time} сек.";
+                timerCountDown++;
+            }
+            else btnNextWord_Click(sender, e);
         }
 
         private void ShowNextWords()
@@ -101,14 +130,31 @@ namespace Spelling_of_words.View
                 }
                 incorrect_words.Add(current);
             }
+
+            if (Settings.Default.TimeLimiter)
+            {
+                timer_limited.Stop();
+            }
         }
 
-        private void btnNextWord_Click(object sender, RoutedEventArgs e)
+        private void btnNextWord_Click(object sender, EventArgs e)
         {
             if (current_word_index == words.Count - 1)
             {
+                if (Settings.Default.TimeLimiter)
+                {
+                    timer_limited.Stop();
+                }
+
                 NavigationService.Navigate(new AssessmentDication(correctWords, words.Count, incorrect_words));
                 return;
+            }
+
+            if (Settings.Default.TimeLimiter)
+            {
+                timerCountDown = 0;
+                incorrect_words.Add(words[current_word_index]);
+                timer_limited.Start();
             }
 
             ShowNextWords();
@@ -116,6 +162,7 @@ namespace Spelling_of_words.View
 
         private void btn_VDBack(object sender, MouseButtonEventArgs e)
         {
+            time_working.Stop();
             NavigationService.GoBack();
         }
 
