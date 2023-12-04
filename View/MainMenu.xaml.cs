@@ -19,6 +19,10 @@ namespace Spelling_of_words.View
 {
     public partial class MainMenu : Page
     {
+        StartMenu start_menu = new StartMenu();
+        ManualProgram manual_page = new ManualProgram();
+        SettingsUser settings_user = new SettingsUser();
+
         public MainMenu()
         {
             InitializeComponent();
@@ -48,11 +52,11 @@ namespace Spelling_of_words.View
         }
 
         private void btn_Manual(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new ManualProgram());
+            NavigationService.Navigate(manual_page);
         }
 
         private void btn_Settings(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new SettingsUser());
+            NavigationService.Navigate(settings_user);
         }
 
         private void btn_Files(object sender, RoutedEventArgs e) {
@@ -61,7 +65,7 @@ namespace Spelling_of_words.View
 
         private void btn_MainWindowBack(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new StartMenu());
+            NavigationService.Navigate(start_menu);
         }
 
         private void btn_closeApp(object sender, MouseButtonEventArgs e)
