@@ -1,4 +1,5 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
+﻿using LSEW;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using Spelling_of_words.Properties;
 using System;
 using System.Windows;
@@ -68,7 +69,7 @@ namespace Spelling_of_words.View
         {
             if (!Settings.Default.TimeLimiter)
             {
-                NavigationService.Navigate(new SettingsLimitedTime());
+                NavigationService.Navigate(MainWindow.SettingsLimitedTime_);
             }
 
             Settings.Default.TimeLimiter = (bool)state_timeLimiter.IsChecked;

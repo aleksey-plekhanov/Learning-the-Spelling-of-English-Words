@@ -1,4 +1,5 @@
-﻿using LSEW.Models;
+﻿using LSEW;
+using LSEW.Models;
 using Spelling_of_words.Properties;
 using System;
 using System.Collections.Generic;
@@ -155,7 +156,7 @@ namespace Spelling_of_words.View
         {
             if (current_word_index == words.Count - 1)
             {
-                NavigationService.Navigate(new FinishLearning());
+                NavigationService.Navigate(MainWindow.FinishLearning_);
                 return;
             }
 
@@ -165,7 +166,7 @@ namespace Spelling_of_words.View
         private void btn_VDBack(object sender, MouseButtonEventArgs e)
         {
             timer.Stop();
-            NavigationService.Navigate(new MainMenu());
+            NavigationService.Navigate(MainWindow.MainMenu_);
         }
 
         private void btn_closeApp(object sender, MouseButtonEventArgs e)

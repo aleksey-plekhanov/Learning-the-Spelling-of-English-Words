@@ -1,4 +1,5 @@
-﻿using LSEW.Models;
+﻿using LSEW;
+using LSEW.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace Spelling_of_words.View
 
         private void btn_backMainMenu(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MainMenu());
+            NavigationService.Navigate(MainWindow.MainMenu_);
         }
 
         private void btn_worksOnBugs(object sender, RoutedEventArgs e)

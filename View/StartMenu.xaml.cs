@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using LSEW;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,19 +9,17 @@ namespace Spelling_of_words.View
 {
     public partial class StartMenu : Page
     {
-        AboutProgram about_program = new AboutProgram();
-
         public StartMenu()
         {
             InitializeComponent();
         }
 
         private void btn_Start(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new MainMenu());
+            NavigationService.Navigate(MainWindow.MainMenu_);
         }
 
         private void btn_About(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(about_program);
+            NavigationService.Navigate(MainWindow.AboutProgram_);
         }
 
         private void btn_CloseApp(object sender, MouseButtonEventArgs e) {

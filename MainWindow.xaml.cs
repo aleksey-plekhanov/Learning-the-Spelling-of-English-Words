@@ -10,11 +10,19 @@ namespace LSEW
     {
         public static MainWindow Window;
 
+        public static StartMenu StartMenu_ = new StartMenu();
+        public static AboutProgram AboutProgram_ = new AboutProgram();
+        public static MainMenu MainMenu_ = new MainMenu();
+        public static ManualProgram ManualProgram_ = new ManualProgram();
+        public static SettingsUser SettingsUser_ = new SettingsUser();
+        public static SettingsLimitedTime SettingsLimitedTime_ = new SettingsLimitedTime();
+        public static FinishLearning FinishLearning_ = new FinishLearning();
+
         public MainWindow()
         {
             InitializeComponent();
             MouseDown += Window_MouseDown;
-            MainFrame.Content = new StartMenu();
+            MainFrame.Content = StartMenu_;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

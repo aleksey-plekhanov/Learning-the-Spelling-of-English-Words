@@ -1,4 +1,5 @@
-﻿using LSEW.ParsingText;
+﻿using LSEW;
+using LSEW.ParsingText;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,10 +20,6 @@ namespace Spelling_of_words.View
 {
     public partial class MainMenu : Page
     {
-        StartMenu start_menu = new StartMenu();
-        ManualProgram manual_page = new ManualProgram();
-        SettingsUser settings_user = new SettingsUser();
-
         public MainMenu()
         {
             InitializeComponent();
@@ -52,11 +49,11 @@ namespace Spelling_of_words.View
         }
 
         private void btn_Manual(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(manual_page);
+            NavigationService.Navigate(MainWindow.ManualProgram_);
         }
 
         private void btn_Settings(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(settings_user);
+            NavigationService.Navigate(MainWindow.SettingsUser_);
         }
 
         private void btn_Files(object sender, RoutedEventArgs e) {
@@ -65,7 +62,7 @@ namespace Spelling_of_words.View
 
         private void btn_MainWindowBack(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(start_menu);
+            NavigationService.Navigate(MainWindow.StartMenu_);
         }
 
         private void btn_closeApp(object sender, MouseButtonEventArgs e)
