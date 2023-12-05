@@ -1,7 +1,9 @@
 ﻿using LSEW;
+using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Spelling_of_words.Properties;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -46,13 +48,14 @@ namespace Spelling_of_words.View
         {
             try
             {
-                CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+                OpenFileDialog dialog = new OpenFileDialog();
 
                 dialog.Title = "Выберите файла со словами";
                 dialog.InitialDirectory = Settings.Default.PathFileWords;
+                dialog.Filter = "Text files |*.txt;*.csv";
                 dialog.RestoreDirectory = true;
 
-                if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+                if (dialog.ShowDialog() == true)
                 {
                     Settings.Default.PathFileWords = dialog.FileName;
                     pathFileBox.Text = Settings.Default.PathFileWords;

@@ -28,23 +28,14 @@ namespace Spelling_of_words.View
         private void btn_learnWords(object sender, RoutedEventArgs e) {
 
             var words = ParsingTXT.ReadFile();
-            if (words == null || words.Count() == 0)
-            {
-                MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Изучение правописания слов | Ошибка чтения файла");
-                return;
-            }
+            if (words.Count() == 0) return;
 
             NavigationService.Navigate(new LearningWords(words));
         }
         private void btn_Dictation(object sender, RoutedEventArgs e) 
         {
             var words = ParsingTXT.ReadFile();
-            if(words == null || words.Count() == 0)
-            {
-                MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Диктант | Ошибка чтения файла");
-                return;
-            }
-
+            if (words.Count() == 0) return;
             NavigationService.Navigate(new VocabularyDictation(words));
         }
 

@@ -19,35 +19,40 @@ namespace LSEW.ParsingText
             List<Word> words = new List<Word>();
             if (!File.Exists(pathFile)) return words;
 
-            using (StreamReader sr = new StreamReader(pathFile))
+            try
             {
-                string currentLine;
-                string[] currentFields;
-
-                while ((currentLine = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(pathFile))
                 {
-                    currentFields = currentLine.Split(',');
+                    string currentLine;
+                    string[] currentFields;
 
-                    Word currentUser = new Word
-                    (
-                        currentFields[0].TrimStart(),
-                        currentFields[1].TrimStart()
-                    );
+                    while ((currentLine = sr.ReadLine()) != null)
+                    {
+                        currentFields = currentLine.Split(',');
 
-                    words.Add(currentUser);
+                        Word currentUser = new Word
+                        (
+                            currentFields[0].TrimStart(),
+                            currentFields[1].TrimStart()
+                        );
+
+                        words.Add(currentUser);
+                    }
                 }
+
+                if (words.Count == 0) return words;
+
+                if (Settings.Default.GenerateRandomWords)
+                {
+                    words = words.OrderBy(a => rand.Next()).ToList();
+                }
+
+                MessageBox.Show($"Загружено {words.Count} слов(а)", "Слова из файла");
             }
-
-            if (words.Count == 0) return words;
-
-            if (Settings.Default.GenerateRandomWords)
+            catch
             {
-                words = words.OrderBy(a => rand.Next()).ToList();
+                MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Ошибка чтения файла");
             }
-
-            MessageBox.Show($"Загружено {words.Count} слов(а)", "Слова из файла");
-
-
             return words;
         }
     }
