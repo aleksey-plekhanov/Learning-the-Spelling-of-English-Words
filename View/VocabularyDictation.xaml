@@ -13,28 +13,28 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/View/background.png"/>
             </Grid.Background>
-            <Button Style="{DynamicResource btnCheckSettings}" x:Name="btn_check" Content="Проверить" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="40" Width="175" Click="btn_Click" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Padding="1,1,1,1" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.055"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+            <Button Style="{DynamicResource btnCheckSettings}" x:Name="btn_check" Content="Проверить" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Height="40" Width="175" Click="btn_Click" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Padding="1,1,1,1" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
-            <Label x:Name="word_label" Content="Загрузка слова..." HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Height="41" Width="550" FontSize="22" HorizontalContentAlignment="Center" Foreground="White"/>
-            <TextBox Style="{DynamicResource TextBoxSettings}" x:Name="inputWord" HorizontalAlignment="Center" Height="41" Margin="0,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" RenderTransformOrigin="1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
+            <Label x:Name="word_label" Content="Загрузка слова..." HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Height="40" Width="560" FontSize="22" HorizontalContentAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="inputWord" HorizontalAlignment="Center" Height="41" Margin="0,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" RenderTransformOrigin="1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
             <Label x:Name="checkСorrectly" Content="" HorizontalAlignment="Center" Margin="0,315,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Cascadia Mono" FontWeight="Bold" Height="30"/>
-            <Button Style="{DynamicResource btnCheckSettings}" x:Name="btnNextWord" Content="Следующее слово" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="40" Width="175" Click="btnNextWord_Click" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Padding="1,1,1,1" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.055"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+            <Button Style="{DynamicResource btnCheckSettings}" x:Name="btnNextWord" Content="Следующее слово" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Height="40" Width="190" Click="btnNextWord_Click" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Padding="1,1,1,1" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
             <Label x:Name="labelScore" Content="Кол-во правильных ответов: " HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
             <Label x:Name="quantityScore" Content="0" HorizontalAlignment="Left" Margin="188,385,0,0" RenderTransformOrigin="-0.451,0.512" Width="36" VerticalAlignment="Top" Foreground="White" FontSize="11"/>

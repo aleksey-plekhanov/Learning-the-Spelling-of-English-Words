@@ -29,10 +29,10 @@ namespace Spelling_of_words.View
         {
             if (Settings.Default.TimeLimiter)
             {
-                state_timeLimiter.Content = new string(' ', 7) + $"Ограничить время на ответ в диктанте. Ограничение: {Settings.Default.limitedTime} сек.";
+                state_timeLimiter.Content = $"  Ограничить время на ответ в диктанте. Ограничение: {Settings.Default.limitedTime} сек.";
             }
-            else state_timeLimiter.Content = new string(' ', 7) + "Ограничить время на ответ в диктанте";
-        }
+            else state_timeLimiter.Content = "  Ограничить время на ответ в диктанте  ";
+        }  
 
         private void btn_SettingsBack(object sender, MouseButtonEventArgs e)
         {

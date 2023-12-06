@@ -14,17 +14,29 @@
                 <ImageBrush ImageSource="/View/background.png"/>
             </Grid.Background>
             <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
-            <Button Content="Работа над ошибками" HorizontalAlignment="Left" Margin="200,375,0,0" VerticalAlignment="Top" Height="40" Width="140" Click="btn_worksOnBugs"/>
+            <Button Content="Работа над ошибками" HorizontalAlignment="Left" Margin="159,375,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="btn_worksOnBugs" FontSize="16" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <Label x:Name="label_estimation" Content="5" HorizontalAlignment="Center" VerticalAlignment="Top" Height="190" Width="98" FontSize="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,76,0,0" Foreground="White"/>
-            <Label Content="Оценка" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" Height="42" Width="88" FontSize="22" Foreground="White"/>
-            <Label Content="Результат диктанта" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="49" Width="270" FontSize="30" Foreground="White"/>
-            <Image Margin="200,286,550,114" Source="/free-icon-trophy-4549504.png" Stretch="Fill"/>
-            <Label Content="Результат:" HorizontalAlignment="Left" Margin="255,281,0,0" VerticalAlignment="Top" Width="140" FontSize="16" Foreground="White" Height="30"/>
-            <Label x:Name="label_procentresult" Content="100%" HorizontalAlignment="Left" Margin="258,308,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60"/>
-            <Label Content="Набрано баллов:" Margin="503,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left"/>
-            <Label x:Name="label_countscore" Content="24 из 25" Margin="503,311,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left"/>
-            <Button Content="Выйти в главное меню" Margin="460,375,200,0" VerticalAlignment="Top" Height="40" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu"/>
-            <Image Margin="448,286,302,114" Source="/free-icon-box-4108283.png" Stretch="Fill"/>
+            <Label Content=" Оценка" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" Height="42" Width="98" FontSize="22" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
+            <Label Content="Результат диктанта" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="50" Width="296" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
+            <Image Margin="200,286,550,114" Source="/free-icon-trophy-4549504.png" Stretch="Fill" Height="50"/>
+            <Label Content="Результат:" HorizontalAlignment="Left" Margin="255,281,0,0" VerticalAlignment="Top" Width="140" FontSize="16" Foreground="White" Height="30" FontWeight="Bold"/>
+            <Label x:Name="label_procentresult" Content="100%" HorizontalAlignment="Left" Margin="255,304,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Набрано баллов:" Margin="503,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <Label x:Name="label_countscore" Content="24 из 25" Margin="504,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16"/>
+            <Button Content="Выйти в главное меню" Margin="448,375,152,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu" Width="200" FontSize="16" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Image Margin="448,286,302,114" Source="/free-icon-box-4108283.png" Stretch="Fill" Width="50"/>
 
         </Grid>
 

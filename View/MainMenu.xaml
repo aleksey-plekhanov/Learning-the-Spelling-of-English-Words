@@ -13,12 +13,42 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/View/background.png"/>
             </Grid.Background>
-            <Button Content="Инструкция" HorizontalAlignment="Left" Height="50" Margin="176,235,0,0" VerticalAlignment="Top" Width="126" Click="btn_Manual"/>
-            <Button Content="Настройки" HorizontalAlignment="Left" Height="50" Margin="324,235,0,0" VerticalAlignment="Top" Width="126" Click="btn_Settings"/>
-            <Button Content="Файлы со словами" HorizontalAlignment="Left" Height="50" Margin="476,235,0,0" VerticalAlignment="Top" Width="126" Click="btn_Files"/>
-            <Button Content="Изучение правописания слов" HorizontalAlignment="Left" Height="50" Margin="176,151,0,0" VerticalAlignment="Top" Width="211" Click="btn_learnWords"/>
-            <Button Content="Словарный диктант" HorizontalAlignment="Left" Height="50" Margin="400,151,0,0" VerticalAlignment="Top" Width="202" Click="btn_Dictation"/>
-            <TextBlock HorizontalAlignment="Left" Height="29" Margin="176,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="426" TextAlignment="Center" FontSize="20" Foreground="White" FontWeight="Bold"><Run Language="ru-ru" Text="Главное меню"/></TextBlock>
+            <Button Content="Инструкция" HorizontalAlignment="Left" Height="50" Margin="140,239,0,0" VerticalAlignment="Top" Width="160" Click="btn_Manual" FontSize="18" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Настройки" HorizontalAlignment="Center" Height="50" Margin="0,239,0,0" VerticalAlignment="Top" Width="160" Click="btn_Settings" FontSize="18" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Файлы со словами" HorizontalAlignment="Left" Height="50" Margin="500,239,0,0" VerticalAlignment="Top" Width="160" Click="btn_Files" FontSize="17" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Изучение правописания слов" HorizontalAlignment="Left" Height="50" Margin="140,157,0,0" VerticalAlignment="Top" Width="240" Click="btn_learnWords" FontSize="17" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Словарный диктант" HorizontalAlignment="Left" Height="50" Margin="420,156,0,0" VerticalAlignment="Top" Width="240" Click="btn_Dictation" FontSize="18" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Height="40" Margin="180,90,0,0" TextWrapping="Wrap" Width="426" TextAlignment="Center" FontSize="24" Foreground="White" FontWeight="Bold" VerticalAlignment="Top"><Run Language="ru-ru" Text="Главное меню"/></TextBlock>
             <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/back-track.png" MouseLeftButtonDown="btn_MainWindowBack"/>
             <TextBlock HorizontalAlignment="Left" Height="33" Margin="705,405,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16"/>
             <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>

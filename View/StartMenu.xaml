@@ -14,8 +14,20 @@
             <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="165,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" FontWeight="Bold" FontSize="22" FontFamily="Bahnschrift SemiBold" TextAlignment="Center" Foreground="White"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
-        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="315,182,0,0" VerticalAlignment="Top" Width="210" Click="btn_Start" FontSize="18"/>
-        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="315,257,0,0" VerticalAlignment="Top" Width="210" Click="btn_About" FontSize="18"/>
+        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="295,180,0,0" VerticalAlignment="Top" Width="250" Click="btn_Start" FontSize="26" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="295,250,0,0" VerticalAlignment="Top" Width="250" Click="btn_About" FontSize="26" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <TextBlock HorizontalAlignment="Left" Height="33" Margin="705,405,0,0" TextWrapping="Wrap" Text="by alexgger" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Bahnschrift SemiBold" FontWeight="Bold" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_CloseApp"/>
 
