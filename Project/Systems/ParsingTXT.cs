@@ -52,6 +52,7 @@ namespace LSEW.ParsingText
             catch
             {
                 MessageBox.Show("Выбранный файл не читается программой.\nПосмотрите еще раз инструкцию!", "Ошибка чтения файла");
+                words.Clear();
             }
             return words;
         }
