@@ -48,7 +48,7 @@ namespace Spelling_of_words.View
         }
 
         private void btn_Files(object sender, RoutedEventArgs e) {
-
+            Process.Start("https://github.com/alexgger/Learning-the-Spelling-of-English-Words/tree/master/Ready-made-files-with-words");
         }
 
         private void btn_MainWindowBack(object sender, MouseButtonEventArgs e)
