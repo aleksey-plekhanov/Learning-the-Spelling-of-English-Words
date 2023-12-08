@@ -14,7 +14,13 @@
         </Grid.Background>
         <Label Content="Введите количество секунд на один ответ:" HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" FontSize="26" Foreground="White"/>
         <TextBox x:Name="inputsecond" HorizontalAlignment="Center" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="400" HorizontalContentAlignment="Center" FontSize="24" Margin="0,177,0,0" Height="35"/>
-        <Button Content="Подтвердить" HorizontalAlignment="Center" Margin="0,258,0,0" VerticalAlignment="Top" Height="40" Width="310" FontSize="20" Click="btn_confirmTime"/>
+        <Button Content="Подтвердить" HorizontalAlignment="Center" Margin="0,258,0,0" VerticalAlignment="Top" Height="40" Width="310" FontSize="20" Click="btn_confirmTime">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
 
     </Grid>

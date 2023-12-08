@@ -14,17 +14,17 @@
             <ImageBrush ImageSource="/View/background.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="165,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" FontWeight="Bold" FontSize="22" FontFamily="Bahnschrift SemiBold" TextAlignment="Center" Foreground="White"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
-        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="295,180,0,0" VerticalAlignment="Top" Width="250" Click="btn_Start" FontSize="26" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White" >
+        <Button Content="Начать изучение" HorizontalAlignment="Left" Height="45" Margin="295,180,0,0" VerticalAlignment="Top" Width="250" Click="btn_Start" FontSize="22" FontFamily="Calibri">
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="295,250,0,0" VerticalAlignment="Top" Width="250" Click="btn_About" FontSize="26" FontFamily="Calibri" BorderBrush="White" Background="#FF42AAFF" Foreground="White">
+        <Button Content="О программе" HorizontalAlignment="Left" Height="45" Margin="295,250,0,0" VerticalAlignment="Top" Width="250" Click="btn_About" FontSize="22" FontFamily="Calibri">
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>

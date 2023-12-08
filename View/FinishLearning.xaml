@@ -16,8 +16,20 @@
             <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/icon_home.png" MouseLeftButtonDown="btn_FLBack"/>
             <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
             <Label Content="Слова закончились!" HorizontalAlignment="Left" Margin="282,111,0,0" VerticalAlignment="Top" FontSize="28" FontFamily="Bahnschrift SemiBold" Foreground="White"/>
-            <Button Content="Начать заново изучать слова" HorizontalAlignment="Left" Margin="266,198,0,0" VerticalAlignment="Top" Height="40" Width="300" FontSize="18" Click="btn_startLearningAgain"/>
-            <Button Content="Выйти в главное меню" HorizontalAlignment="Left" Margin="266,259,0,0" VerticalAlignment="Top" FontSize="18" Height="40" Width="300" Click="btn_returnMainMenu"/>
+            <Button Content="Начать заново изучать слова" HorizontalAlignment="Left" Margin="266,198,0,0" VerticalAlignment="Top" Height="40" Width="300" FontSize="18" Click="btn_startLearningAgain">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Выйти в главное меню" HorizontalAlignment="Left" Margin="266,259,0,0" VerticalAlignment="Top" FontSize="18" Height="40" Width="300" Click="btn_returnMainMenu">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
         </Grid>
 
