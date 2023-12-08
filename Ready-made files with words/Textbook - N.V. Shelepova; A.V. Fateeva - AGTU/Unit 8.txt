@@ -1,0 +1,50 @@
+actuator, привод; пускатель
+assume, предполагать; полагать; считать
+auxiliary, вспомогательный
+bionics, бионика
+capability, возможность
+caterpillar, гусеница; гусеничный механизм
+cell, клетка
+cybernetics, кибернетика
+decrease, уменьшать; снижать
+degree, степень
+direction, направление
+drive technology, исполнительные приводы (тип испольполнительных приводов)
+economic losses, экономические потери
+endow, наделять; одарять
+exploitation environment, среда эксплуатации
+failure, cбой; неудача
+hazardous, опасный; рискованный
+implement, воплощать; реализовывать
+in accordance with, в соотвествие с
+insignificant, незначительный; неважный
+issue, вопрос; проблема; задача
+jet, реактивный
+link, связь; соединение; ссылка
+manual, ручной
+the military, военные
+nanorobotics, нанороботехника
+non-invasive removal of malignant tumors, неинвазивное удаление злокачественных опухолей
+primary, первостепенный; первичный
+propulsion, движитель
+purpose, назначение; цель
+put into circulation, вводить в обращение
+remote, дистационный; удаленный
+resemblance, сходство
+robot, робот; автомат; телемеханическое устройство
+robot-welder, робот-сварщик
+sand grain, песчинка
+size, размер
+smart dust, "умная пыль"
+species, вид; разновидность
+stepping, шагающий
+surgical, хирургический
+surveillance, наблюдение; надзор
+swarm robotics, роевая роботехника
+system analysis, системный анализ
+teleoperated, дистационно-управляемая
+thrive, процветать; преуспевать
+type of propeller, тип движителя
+universality, универсальность
+water-jet, водометный
+wheeled, колесный

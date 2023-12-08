@@ -1,0 +1,39 @@
+analog, аналоговый
+binary, двоичный
+blood glucose level, уровень глюкозы в крови
+chip, чип; микросхема
+cloud computing, облачные вычисления
+communication, общение
+conversion, конверсия; преобразование
+data streams, потоки данных
+destructive, разрушительный
+digitization, оцифровка
+the disabled, инвалиды
+discrete, дискретный
+domain, область; сфера
+e-commerce, электронная торговля
+equipment, оборудование
+home automation, технология "умный дом"
+household appliances, домашние приборы
+impact, воздействие
+implantable medical devices, имплантируемые медицинские устройства
+integrate, интегрировать; обЪединять
+kernel, ядро
+location independence, независимое местоположение
+nanoscale impression, наносхема
+nanosatellite, наноспутник
+on demand scalability, масштабируемость по требованию
+open source software, ПО с открытым исходным кодом
+perception, восприятие
+power consumption, потребление электроэнергии
+radio frequency signals, сигналы радиочастоты
+remote control, пульт дистанционного управления
+safety, безопасность
+satellite connection, спутниковая связь
+secure access, безопасный доступ
+semiconductor, полупроводник
+tablet PC, планшет
+touch panel, сенсорная панель
+ventilation, вентиляция
+waste heat, отработанное тепло
+wireless connection, беспроводное соединение

@@ -1,0 +1,48 @@
+achievement, достижение
+artificial intelligence, искусственный интеллект
+automated switchboard, автоматические коммутатор
+benefit, приносить выгоду
+board games, настольные игры
+calculations, вычисления
+cluster, группироваться; собираться в группе
+communication, коммуникация; общение
+computer memory, компьютерная память
+data analysis, анализ данных
+data encryption, шифрование данных
+definite tasks, определенные задачи
+determine, определять; устанавливать; решать
+digital television, цифровое телевидение
+draughts, шашки
+emotional intelligence, эмоциональный интеллект
+essense, сущность
+facilitate, облегчать; способность; содействовать
+the finished chains of associative links, готовые цепочки ассоциативных связей
+folder, папка
+forecasting, прогнозирование
+inherent, присущий; неотъемлемый
+interaction, взаимодействие
+interpenetrate, взаимопроникать
+launch, запускать
+manifestation, проявление; манифестация
+manual labor, ручной труд
+manufacturing, производство
+neural network, нейронная сеть
+particular goods, особые товары
+pattern recognition, распознавание образцов
+possibility, возможность
+product development, разработка продукта
+reduce, уменьшать
+remote warfare, дистанционно-управляемое оружие
+research, научное исследование
+respond to, отвечать; реагировать на
+robbery, кража
+scale, масштаб
+scientific, научный
+search engine, поисковая система
+self-learning, самообучение
+self-tuning, самонастройка
+sensor, сенсор; датчик
+simulation, симуляция; симулирование; моделирующее устройство
+take decisions, принимать решения
+undertake, предпринимать
+voice recognition, распознавание голоса

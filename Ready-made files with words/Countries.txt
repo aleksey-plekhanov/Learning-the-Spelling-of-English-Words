@@ -1,0 +1,100 @@
+Afghanistan, Афганистан
+Albania, Албания
+Algeria, Алжир
+Andorra, Андорра
+Angola, Ангола
+Antigua and Barbuda, Антигуа и Барбуда
+Argentina, Аргентина
+Armenia, Армения
+Australia, Австралия
+Austria, Австрия
+Azerbaijan, Азербайджан
+Bahamas, Багамы
+Bahrain, Бахрейн
+Bangladesh, Бангладеш
+Barbados, Барбадос
+Belarus, Беларусь
+Belgium, Бельгия
+Belize, Белиз
+Benin, Бенин
+Bhutan, Бутан
+Bolivia, Боливия
+Bosnia and Herzegovina, Босния и Герцеговина
+Botswana, Ботсвана
+Brazil, Бразилия
+Brunei, Бруней
+Bulgaria, Болгария
+Burkina Faso, Буркина-Фасо
+Burundi, Бурунди
+Cabo Verde, Кабо-Верде
+Cambodia, Камбоджа
+Cameroon, Камерун
+Canada, Канада
+Central African Republic, Центральноафриканская Республика
+Chad, Чад
+Chile, Чили
+China, Китай
+Colombia, Колумбия
+Comoros, Коморы
+Congo (Congo-Brazzaville), Конго (Конго-Браззавиль)
+Costa Rica, Коста-Рика
+Croatia, Хорватия
+Cuba, Куба
+Cyprus, Кипр
+Czechia (Czech Republic), Чехия (Чешская Республика)
+Denmark, Дания
+Djibouti, Джибути
+Dominica, Доминика
+Dominican Republic, Доминиканская Республика
+East Timor (Timor-Leste), Восточный Тимор (Тимор-Лесте)
+Ecuador, Эквадор
+Egypt, Египет
+El Salvador, Сальвадор
+Equatorial Guinea, Экваториальная Гвинея
+Eritrea, Эритрея
+Estonia, Эстония
+Eswatini (fmr. "Swaziland"), Эсватини (бывшая Свазиленд)
+Ethiopia, Эфиопия
+Fiji, Фиджи
+Finland, Финляндия
+France, Франция
+Gabon, Габон
+Gambia, Гамбия
+Georgia, Грузия
+Germany, Германия
+Ghana, Гана
+Greece, Греция
+Grenada, Гренада
+Guatemala, Гватемала
+Guinea, Гвинея
+Guinea-Bissau, Гвинея-Бисау
+Guyana, Гайана
+Haiti, Гаити
+Honduras, Гондурас
+Hungary, Венгрия
+Iceland, Исландия
+India, Индия
+Indonesia, Индонезия
+Iran, Иран
+Iraq, Ирак
+Ireland, Ирландия
+Israel, Израиль
+Italy, Италия
+Jamaica, Ямайка
+Japan, Япония
+Jordan, Иордания
+Kazakhstan, Казахстан
+Kenya, Кения
+Kiribati, Кирибати
+Korea, North, Северная Корея
+Korea, South, Южная Корея
+Kosovo, Косово
+Kuwait, Кувейт
+Kyrgyzstan, Киргизия
+Laos, Лаос
+Latvia, Латвия
+Lebanon, Ливан
+Lesotho, Лесото
+Liberia, Либерия
+Libya, Ливия
+Liechtenstein, Лихтенштейн

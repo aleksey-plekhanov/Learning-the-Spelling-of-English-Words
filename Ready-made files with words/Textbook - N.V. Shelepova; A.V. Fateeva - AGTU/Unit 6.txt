@@ -1,0 +1,49 @@
+animation, анимация
+application framework, структура приложения
+architectural decisions, архитектурные решения
+byte code, байт-код
+codename, кодовое имя
+communicator, коммуникатор
+compatibility, совместимость
+comprise, включать; заключать в себе
+considerable, значительный
+consumer, потребитель
+convenience, удобство
+corresponding, соотвествующий
+developer, разработчик
+device, устройство
+digital player, цифровой плеер (проигрыватель)
+disappointed, разочарованный
+e-book, электронная книга
+edit, редактировать
+error, ошибка
+external files, внешние файлы
+flexible, гибкий
+functionality, функциональность
+handheld computer, карманный компьютер
+hardware platform, аппаратная платформа
+high-speed, высокоскоростной
+inconsistent, несостоятельный
+independence, независимость
+interfere, вмешиваться
+logo, логотип
+maintain, поддерживать
+malware, вредосное ПО
+mature, зрелый
+object-oriented programming language, язык объектно-ориентированного программирования
+operating system, операционная система
+runtime, время выполнения
+permission, разрешение
+purchase, покупать
+release, выпуск
+running, исполняющийся; выполняющийся
+shortcoming, недостаток
+source code, исходный код
+string constants, строковые константы
+substitute, заменять
+tablet PC, планшет
+target, цель
+updates, обновления
+virtual machine, виртуальная машина
+wireless network, беспроводная сеть
+wristwatch, наручные часы

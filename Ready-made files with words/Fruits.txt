@@ -1,0 +1,50 @@
+Apple, яблоко
+Banana, банан
+Orange, апельсин
+Strawberry, клубника
+Cherry, вишня
+Watermelon, арбуз
+Grape, виноград
+Pear, груша
+Pineapple, ананас
+Mango, манго
+Lemon, лимон
+Avocado, авокадо
+Raspberry, малина
+Blueberry, голубика
+Blackberry, ежевика
+Peach, персик
+Kiwi, киви
+Plum, слива
+Apricot, абрикос
+Cranberry, клюква
+Pomegranate, гранат
+Persimmon, хурма
+Fig, инжир
+Coconut, кокос
+Passion fruit, маракуйя
+Guava, гуава
+Lychee, ли́чи
+Papaya, папайя
+Mulberry, шелковица
+Nectarine, нектарин
+Quince, айва
+Gooseberry, крыжовник
+Elderberry, бузина
+Tangerine, мандарин
+Clementine, клеменци́я
+Lime, лайм
+Grapefruit, грейпфрут
+Melon, дыня
+Cantaloupe, канталупа
+Honeydew, арбу́зор
+Jackfruit, джекфру́т
+Kiwifruit, киви́
+Plantain, банановый пле́тёнка
+Pomelo, па́мела
+Star fruit, каратэ́
+Durian, ду́риан
+Acerola, ацерола
+Jabuticaba, ябутикаба́
+Breadfruit, хлебно́е дерево́
+Lychee, ли́чи

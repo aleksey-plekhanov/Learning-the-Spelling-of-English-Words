@@ -1,0 +1,48 @@
+admit, признавать
+aggravate, усугублять
+antimalwave protection software, ПО для защиты от вредоносных программ
+automate the process, автоматизировать процесс
+be on the alert, быть на чеку
+bandwidth, пропускная способность
+centralized network monitoring, централизованный сетевой мониторинг
+circumstance, обстоятельство
+content, содержание
+counteract attacks, противодействовать атакам
+dangerous attachments to email, опасные вложения в электронные письма
+dekstop computer, настольный компьютер
+disrupt, нарушать (прерывать)
+distributed denial of service, распределенный отказ в обслуживании
+downtime, время простоя (простой)
+embedded, встроенный
+endpoint device, оконечное устройство
+enhancement, укрепление; усиление
+ensure, обеспечивать
+failed device, неисправное устройство
+fault tolerance, отказоустойчивость
+file sharing, обмен файлами
+feedback, обратная связь
+implement, осуществлять (внедрять)
+intruder, злоумышленник
+malware software, вредосное ПО
+mandatory mechanism, обязательный механизм уровней целостности
+network overload, перегрузка сети
+network worm, сетевой червь
+peak loads, пиковая нагрузка
+premise, предпосылка; посылка
+redundancy, избыточность
+reliable, надежный
+resource, ресурс
+retail, розничная торговля
+sandbox, "песочница"; принцип изоляции; безопасная среда
+seamless, бесшовный
+self-recovering function, функция самовосстановления
+server, сервер
+sophisticated, утонченный; изощренный
+streaming, потоковое видео
+support, поддержка
+threat, угроза
+transparent, прозрачный
+unexpected jump, неожиданный скачок
+uninterrupted access, непрерывный доступ
+virus, вирус
+web browser, веб-браузер
