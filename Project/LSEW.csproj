@@ -255,8 +255,6 @@
     <Resource Include="View\icon-close.png" />
     <Resource Include="free-icon-trophy-4549504.png" />
     <Resource Include="free-icon-box-4108283.png" />
-    <Resource Include="Image1.png" />
-    <Resource Include="Image2.png" />
     <Content Include="Images\background.png" />
     <Resource Include="View\icon_home.png" />
     <Resource Include="View\background.png" />
