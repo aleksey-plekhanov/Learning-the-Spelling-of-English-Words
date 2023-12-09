@@ -7,11 +7,11 @@ using System.Windows;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("LSEW")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Эффективный тренажер для запоминания правописания английских слов")]
+[assembly: AssemblyDescription("github.com/alexgger")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LSEW")]
+[assembly: AssemblyProduct("LSEW by alexgger")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

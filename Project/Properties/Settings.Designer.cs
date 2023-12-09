@@ -25,18 +25,6 @@ namespace Spelling_of_words.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\")]
-        public string PathFileWords {
-            get {
-                return ((string)(this["PathFileWords"]));
-            }
-            set {
-                this["PathFileWords"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool GenerateRandomWords {
             get {
@@ -104,6 +92,18 @@ namespace Spelling_of_words.Properties {
             }
             set {
                 this["limitedTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\")]
+        public string PathFileWords {
+            get {
+                return ((string)(this["PathFileWords"]));
+            }
+            set {
+                this["PathFileWords"] = value;
             }
         }
     }
