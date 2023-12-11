@@ -24,11 +24,11 @@
             <Label x:Name="label_estimation" Content="5" HorizontalAlignment="Center" VerticalAlignment="Top" Height="190" Width="98" FontSize="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,76,0,0" Foreground="White"/>
             <Label Content=" Оценка" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" Height="42" Width="98" FontSize="22" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
             <Label Content="Результат диктанта" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="50" Width="296" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
-            <Image Margin="200,286,550,115" Source="/free-icon-trophy-4549504.png" Stretch="Fill" Height="50" MinWidth="50" MinHeight="50" MaxWidth="50" MaxHeight="50"/>
             <Label Content="Результат:" HorizontalAlignment="Left" Margin="255,281,0,0" VerticalAlignment="Top" Width="140" FontSize="16" Foreground="White" Height="30" FontWeight="Bold"/>
             <Label x:Name="label_procentresult" Content="100%" HorizontalAlignment="Left" Margin="255,304,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60" FontSize="16" FontWeight="Bold"/>
             <Label Content="Набрано баллов:" Margin="503,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold"/>
             <Label x:Name="label_countscore" Content="24 из 25" Margin="504,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16"/>
+            <Image Source="/View/count_score.png" Margin="432,276,288,94" Width="80" Height="80" />
             <Button Content="Выйти в главное меню" Margin="448,375,152,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu" Width="200" FontSize="16" FontFamily="Calibri">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -36,7 +36,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Image Margin="448,286,302,114" Source="/free-icon-box-4108283.png" Stretch="Fill" Width="50" MinWidth="50" MinHeight="50" MaxWidth="50" MaxHeight="50"/>
+            <Image Margin="187,284,543,96" Source="/procent_progress.png" Stretch="Fill" Width="70" Height="70"/>
 
         </Grid>
 

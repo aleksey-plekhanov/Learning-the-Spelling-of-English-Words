@@ -253,6 +253,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="procent_progress.png" />
+    <Resource Include="View\count_score.png" />
+    <Resource Include="smile_angel.png" />
     <Resource Include="😇%28240 x 240%29.png" />
     <Resource Include="View\back-track.png" />
     <Resource Include="View\icon-close.png" />
