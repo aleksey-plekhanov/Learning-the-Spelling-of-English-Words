@@ -1,9 +1,7 @@
 ﻿using LSEW;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using Spelling_of_words.Properties;
 using System;
-using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
