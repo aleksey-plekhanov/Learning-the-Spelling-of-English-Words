@@ -11,9 +11,9 @@
     <Grid>
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/View/background.png"/>
+                <ImageBrush ImageSource="../Images/background.png"/>
             </Grid.Background>
-            <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+            <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="../Images/btn/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
             <Button Content="Работа над ошибками" HorizontalAlignment="Left" Margin="159,375,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="btn_worksOnBugs" FontSize="16" FontFamily="Calibri">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -28,7 +28,7 @@
             <Label x:Name="label_procentresult" Content="100%" HorizontalAlignment="Left" Margin="255,304,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60" FontSize="16" FontWeight="Bold"/>
             <Label Content="Набрано баллов:" Margin="503,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold"/>
             <Label x:Name="label_countscore" Content="24 из 25" Margin="504,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16"/>
-            <Image Source="/View/count_score.png" Margin="432,276,288,94" Width="80" Height="80" />
+            <Image Source="../Images/dication/count_score.png" Margin="432,276,288,94" Width="80" Height="80" />
             <Button Content="Выйти в главное меню" Margin="448,375,152,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu" Width="200" FontSize="16" FontFamily="Calibri">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -36,7 +36,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Image Margin="187,284,543,96" Source="/procent_progress.png" Stretch="Fill" Width="70" Height="70"/>
+            <Image Margin="187,284,543,96" Source="../Images/dication/procent_progress.png" Stretch="Fill" Width="70" Height="70"/>
 
         </Grid>
 

@@ -10,11 +10,11 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/View/background.png"/>
+            <ImageBrush ImageSource="../Images/background.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="103,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="629" TextAlignment="Center"  FontFamily="Bahnschrift SemiLight" FontWeight="Bold" FontSize="18" Foreground="White"><Run Language="ru-ru" Text="Тренажер для запоминания правописания английских слов"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="160" Margin="103,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="650" Foreground="Black" FontSize="14" Background="White" Padding="10,10,10,10" ><Run Text="Тренажер разрабатывается для помощи студентам в запоминании правописания английских слов. Он представляет собой словарный диктант, который помогает студентам проверить свои знания правописания слов на английском языке. Тренажер также может быть использован для тренировки написания слов и для улучшения навыков правописания"/><Run Text=" на английском языке"/><Run Text="."/><LineBreak/><Run/><LineBreak/><Run FontWeight="Bold" Text="Разработчик программы"/><Run Text=": Плеханов Алексей"/><LineBreak/><Run FontWeight="Bold" Text="Страничка автора"/><Run Text=": "/><Run Text="github.com/alexgger"/><Run Text=" "/></TextBlock>
-        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="/View/back-track.png" MouseLeftButtonDown="btn_AboutBack"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="/View/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="30,30,0,0" VerticalAlignment="Top" Width="45" Source="../Images/btn/back-track.png" MouseLeftButtonDown="btn_AboutBack"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="../Images/btn/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
     </Grid>
 </Page>

@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -253,23 +268,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="procent_progress.png" />
-    <Resource Include="View\count_score.png" />
-    <Resource Include="smile_angel.png" />
-    <Resource Include="😇%28240 x 240%29.png" />
-    <Resource Include="View\back-track.png" />
-    <Resource Include="View\icon-close.png" />
-    <Resource Include="free-icon-trophy-4549504.png" />
-    <Resource Include="free-icon-box-4108283.png" />
+    <Resource Include="Images\dication\procent_progress.png" />
+    <Resource Include="Images\dication\count_score.png" />
+    <Resource Include="Images\btn\icon-close.png" />
     <Resource Include="icon.ico" />
     <Content Include="Images\background.png" />
-    <Resource Include="View\icon_home.png" />
-    <Resource Include="View\background.png" />
     <Resource Include="Images\btn\icon_home.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\btn\back-track.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /y "$(SolutionDir)\Images\" "$(TargetDir)\Images\"
+xcopy /y "$(SolutionDir)\Images\btn\" "$(TargetDir)\Images\btn\"
+xcopy /y "$(SolutionDir)\Images\dication\" "$(TargetDir)\Images\dication\"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
