@@ -88,7 +88,11 @@ namespace Spelling_of_words.View
                 timerLimited_label.Content = $"{time} сек.";
                 timerCountDown++;
             }
-            else btnNextWord_Click(sender, e);
+            else
+            {
+                incorrect_words.Add(words[current_word_index]);
+                btnNextWord_Click(sender, e);
+            }
         }
 
         private void ShowNextWords()
@@ -153,7 +157,6 @@ namespace Spelling_of_words.View
             if (Settings.Default.TimeLimiter)
             {
                 timerCountDown = 0;
-                incorrect_words.Add(words[current_word_index]);
                 timer_limited.Start();
             }
 
