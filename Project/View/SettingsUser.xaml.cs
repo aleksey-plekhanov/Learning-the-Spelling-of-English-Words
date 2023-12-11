@@ -42,7 +42,7 @@ namespace Spelling_of_words.View
             Application.Current.Shutdown();
         }
 
-        private void SelectFolder(object sender, RoutedEventArgs e)
+        private void SelectFile(object sender, RoutedEventArgs e)
         {
             try
             {
