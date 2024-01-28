@@ -1,4 +1,6 @@
 ﻿using LSEW.ParsingText;
+using Spelling_of_words.Models;
+using Spelling_of_words.Properties;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,9 +10,19 @@ namespace Spelling_of_words.View
 {
     public partial class FinishLearning : Page
     {
-        public FinishLearning()
+        public FinishLearning(SecCounter timer)
         {
             InitializeComponent();
+
+            if (!Settings.Default.DisableTimeCounting)
+            {
+                timer_label.Content = $"{timer.GetMinutes()} мин. {timer.GetSeconds()} сек.";
+            }
+            else
+            {
+                timer_label.Visibility = Visibility.Hidden;
+                textlabel_timer.Visibility = Visibility.Hidden;
+            }
         }
 
         private void btn_startLearningAgain(object sender, RoutedEventArgs e)

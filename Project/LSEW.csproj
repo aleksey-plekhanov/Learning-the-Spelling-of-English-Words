@@ -100,6 +100,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Timer.cs" />
     <Compile Include="View\AboutProgram.xaml.cs">
       <DependentUpon>AboutProgram.xaml</DependentUpon>
     </Compile>
@@ -213,6 +214,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="View\clock.png" />
     <Resource Include="Images\dication\procent_progress.png" />
     <Resource Include="Images\dication\count_score.png" />
     <Resource Include="Images\btn\icon-close.png" />

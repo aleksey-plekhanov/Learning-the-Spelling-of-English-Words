@@ -1,5 +1,6 @@
 ﻿using LSEW;
 using LSEW.Models;
+using Spelling_of_words.Models;
 using Spelling_of_words.Properties;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Spelling_of_words.View
         private List<Word> words;
 
         private int current_word_index = -1;
-        private int timerCounter = 0;
+        private SecCounter timerCounter = new SecCounter();
 
         DispatcherTimer timer = new DispatcherTimer();
 
@@ -54,14 +55,7 @@ namespace Spelling_of_words.View
 
         void timer_Tick(object sender, EventArgs e)
         {
-            if (timerCounter > 60)
-            {
-                int minutes = Convert.ToInt32(timerCounter / 60);
-                int seconds = timerCounter - minutes * 60;
-                timer_label.Content = $"{minutes} мин. {seconds} сек.";
-            }
-            else timer_label.Content = $"{timerCounter} сек.";
-
+            timer_label.Content = $"{timerCounter.GetMinutes()} мин. {timerCounter.GetSeconds()} сек.";
             timerCounter++;
         }
 
@@ -156,7 +150,7 @@ namespace Spelling_of_words.View
         {
             if (current_word_index == words.Count - 1)
             {
-                NavigationService.Navigate(MainWindow.FinishLearning_);
+                NavigationService.Navigate(new FinishLearning(timerCounter));
                 return;
             }
 

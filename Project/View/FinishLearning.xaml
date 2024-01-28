@@ -30,6 +30,8 @@
                     </Style>
                 </Button.Resources>
             </Button>
+            <Label x:Name="textlabel_timer" Content="Время изучения: " HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="timer_label" Content="0 сек." HorizontalAlignment="Left" Margin="116,397,0,0" RenderTransformOrigin="-0.451,0.512" Width="119" VerticalAlignment="Top" Foreground="White" FontSize="11"/>
 
         </Grid>
 

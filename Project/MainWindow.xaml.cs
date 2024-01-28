@@ -16,7 +16,6 @@ namespace LSEW
         public static ManualProgram ManualProgram_ = new ManualProgram();
         public static SettingsUser SettingsUser_ = new SettingsUser();
         public static SettingsLimitedTime SettingsLimitedTime_ = new SettingsLimitedTime();
-        public static FinishLearning FinishLearning_ = new FinishLearning();
 
         public MainWindow()
         {

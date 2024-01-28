@@ -14,7 +14,7 @@
                 <ImageBrush ImageSource="../Images/background.png"/>
             </Grid.Background>
             <Image HorizontalAlignment="Left" Height="25" Margin="765,10,0,0" VerticalAlignment="Top" Width="25" Source="../Images/btn/icon-close.png" MouseLeftButtonDown="btn_closeApp"/>
-            <Button Content="Работа над ошибками" HorizontalAlignment="Left" Margin="159,375,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="btn_worksOnBugs" FontSize="16" FontFamily="Calibri">
+            <Button Content="Работа над ошибками" HorizontalAlignment="Left" Margin="150,375,0,0" VerticalAlignment="Top" Height="45" Width="200" Click="btn_worksOnBugs" FontSize="16" FontFamily="Calibri">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -24,19 +24,22 @@
             <Label x:Name="label_estimation" Content="5" HorizontalAlignment="Center" VerticalAlignment="Top" Height="190" Width="98" FontSize="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,76,0,0" Foreground="White"/>
             <Label Content=" Оценка" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" Height="42" Width="98" FontSize="22" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
             <Label Content="Результат диктанта" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="50" Width="296" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
-            <Label Content="Результат:" HorizontalAlignment="Left" Margin="255,281,0,0" VerticalAlignment="Top" Width="140" FontSize="16" Foreground="White" Height="30" FontWeight="Bold"/>
-            <Label x:Name="label_procentresult" Content="100%" HorizontalAlignment="Left" Margin="255,304,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Набрано баллов:" Margin="503,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <Label x:Name="label_countscore" Content="24 из 25" Margin="504,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16"/>
-            <Image Source="../Images/dication/count_score.png" Margin="432,276,288,94" Width="80" Height="80" />
-            <Button Content="Выйти в главное меню" Margin="448,375,152,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu" Width="200" FontSize="16" FontFamily="Calibri">
+            <Label Content="Результат:" HorizontalAlignment="Right" Margin="0,285,272,0" VerticalAlignment="Top" Width="140" FontSize="16" Foreground="White" Height="30" FontWeight="Bold"/>
+            <Label x:Name="label_procentresult" Content="100%" Margin="388,306,352,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="60" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Набрано баллов:" Margin="596,283,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <Label x:Name="label_countscore" Content="24 из 25" Margin="597,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16"/>
+            <Image Source="../Images/dication/count_score.png" Margin="519,276,201,94" Width="80" Height="80" />
+            <Button Content="Выйти в главное меню" Margin="448,375,150,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.992" Click="btn_backMainMenu" Width="200" FontSize="16" FontFamily="Calibri">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Image Margin="187,284,543,96" Source="../Images/dication/procent_progress.png" Stretch="Fill" Width="70" Height="70"/>
+            <Image Margin="319,286,411,94" Source="../Images/dication/procent_progress.png" Stretch="Fill" Width="70" Height="70"/>
+            <Label Content="Затрачено времени:" HorizontalAlignment="Right" Margin="0,285,511,0" VerticalAlignment="Top" Width="169" FontSize="16" Foreground="White" Height="30" FontWeight="Bold"/>
+            <Label x:Name="label_timespent" Content="59:59" HorizontalAlignment="Left" Margin="120,306,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="169" FontSize="16" FontWeight="Bold"/>
+            <Image Margin="50,286,680,94" Source="/View/clock.png" Stretch="Fill" Width="70" Height="70"/>
 
         </Grid>
 

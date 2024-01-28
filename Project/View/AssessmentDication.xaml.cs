@@ -1,5 +1,7 @@
 ﻿using LSEW;
 using LSEW.Models;
+using Spelling_of_words.Models;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,10 +15,13 @@ namespace Spelling_of_words.View
         // Неправильные написанные слова
         private List<Word> incorrect_words_;
 
-        public AssessmentDication(int correct_answers, int count_questions, List<Word> incorrect_words)
+        public AssessmentDication(int correct_answers, int count_questions, List<Word> incorrect_words, SecCounter timer)
         {
             InitializeComponent();
             CalculateEstimation(correct_answers, count_questions);
+
+            // Отображение затраченного времени
+            label_timespent.Content = $"{timer.GetMinutes()} мин. {timer.GetSeconds()} сек.";
 
             // Загрузка неправильно написанных слов пользователем
             incorrect_words_ = incorrect_words;

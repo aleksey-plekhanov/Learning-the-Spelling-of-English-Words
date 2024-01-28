@@ -1,4 +1,5 @@
 ﻿using LSEW.Models;
+using Spelling_of_words.Models;
 using Spelling_of_words.Properties;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,8 @@ namespace Spelling_of_words.View
         private int current_word_index = -1;
         private int correctWords = 0;
 
-        private int timerCounter = 0;
-        private int timerCountDown = 0;
+        private SecCounter timerCounter = new SecCounter();
+        private SecCounter timerCountDown = new SecCounter(Settings.Default.limitedTime - 1);
 
         private DispatcherTimer time_working = new DispatcherTimer();
         private DispatcherTimer timer_limited = new DispatcherTimer();
@@ -68,31 +69,23 @@ namespace Spelling_of_words.View
 
         void timer_Tick(object sender, EventArgs e)
         {
-            if(timerCounter > 60)
-            {
-                int minutes = Convert.ToInt32(timerCounter / 60);
-                int seconds = timerCounter - minutes * 60;
-                timer_label.Content = $"{minutes} мин. {seconds} сек.";
-            }
-            else timer_label.Content = $"{timerCounter} сек.";
-
+            timer_label.Content = $"{timerCounter.GetMinutes()} мин. {timerCounter.GetSeconds()} сек.";
             timerCounter++;
         }
 
         void timerLimited_Tick(object sender, EventArgs e)
         {
-            int time = Settings.Default.limitedTime - timerCountDown;
-
-            if (timerCountDown <= Settings.Default.limitedTime)
+            if (timerCountDown.totalSeconds > 0)
             {
-                timerLimited_label.Content = $"{time} сек.";
-                timerCountDown++;
+                timerLimited_label.Content = $"{timerCountDown.totalSeconds} сек.";
             }
             else
             {
+                timerLimited_label.Content = $"5 сек.";
                 incorrect_words.Add(words[current_word_index]);
                 btnNextWord_Click(sender, e);
             }
+            timerCountDown--;
         }
 
         private void ShowNextWords()
@@ -103,6 +96,12 @@ namespace Spelling_of_words.View
             checkСorrectly.Content = string.Empty;
             btn_check.Visibility = Visibility.Visible;
             btnNextWord.Visibility = Visibility.Hidden;
+
+            if (Settings.Default.TimeLimiter)
+            {
+                timerCountDown.SetTotalSeconds(Settings.Default.limitedTime);
+                timer_limited.Start();
+            }
         }
 
         private void ResponseResult(SolidColorBrush colorBrush, string text)
@@ -149,15 +148,10 @@ namespace Spelling_of_words.View
                 {
                     timer_limited.Stop();
                 }
+                time_working.Stop();
 
-                NavigationService.Navigate(new AssessmentDication(correctWords, words.Count, incorrect_words));
+                NavigationService.Navigate(new AssessmentDication(correctWords, words.Count, incorrect_words, timerCounter));
                 return;
-            }
-
-            if (Settings.Default.TimeLimiter)
-            {
-                timerCountDown = 0;
-                timer_limited.Start();
             }
 
             ShowNextWords();
@@ -165,6 +159,11 @@ namespace Spelling_of_words.View
 
         private void btn_VDBack(object sender, MouseButtonEventArgs e)
         {
+            if (Settings.Default.TimeLimiter)
+            {
+                timer_limited.Stop();
+            }
+
             time_working.Stop();
             NavigationService.GoBack();
         }
